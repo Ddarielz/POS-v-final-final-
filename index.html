@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punto de venta</title>
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <!-- Imagen en la esquina superior izquierda-->
+      <img src="./static/img/logo.png" alt="logo" class="logo-izq" />
+      <!-- Definimos titulo -->
+      <div class="titulo">
+        <div>
+          <h1 class="titulo-1">Supersito piadrabola</h1>
+          <h2 class="subtitulo-1">No es bueno, pero es barato.</h2>
+        </div>
+      </div>
+      <!--Imagen en la esquina superior derecha-->
+      <img src="./static/img/logo2.png" alt="logo" class="logo-der" />
+    </div>
+
+    <div class="table">
+      <table border="0" id="tblLista">
+        <tr>
+          <th>Cantidad</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Total</th>
+        </tr>
+
+        <tbody id="tblListaBody">
+          <!-- aqui se listan los productos -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Input para introducir el codigo -->
+    <input
+      type="text"
+      placeholder="Insertar codigo de barras"
+      id="txtCodigo"
+      class="escaner"
+    />
+
+    <!-- Modal de cancelación -->
+    <div id="modalCancelacion" class="modal">
+      <div class="modal-content">
+        <h2>Confirmar cancelación</h2>
+        <p>Ingrese la contraseña para cancelar la venta:</p>
+
+        <form id="formCancelacion">
+          <input type="password" id="clave" placeholder="Contraseña" required />
+          <div class="modal-buttons">
+            <button type="submit">Confirmar</button>
+            <button type="button" class="btnCerrar">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal de transferencia -->
+    <div id="modalTransferencia" class="modal">
+      <div class="modal-content">
+        <h2>Transferencia</h2>
+        <p>Ingrese los datos de la transferencia:</p>
+
+        <form id="formTransferencia">
+          <input type="text" placeholder="Numero de cuenta" />
+          <input type="text" placeholder="Banco" />
+          <input type="text" placeholder="Monto" />
+
+          <div class="modal-buttons">
+            <button type="submit">Confirmar</button>
+            <button type="button" class="btnCerrar">Cerrar</button>
+          </div>
+        </form>
+      </div>
+
+    <!-- Modal de saldo -->
+    <div id="modalSaldo" class="modal">
+      <div class="modal-content">
+        <h2>Saldo</h2>
+        <p>Tiempo aire o paquete</p>
+
+        <div>
+          <button>Tiempo aire</button>
+          <button>Paquete</button>
+        </div>
+        <button>$50</button>
+        <button>$100</button>
+        <button>$150</button>
+        <button>$200</button>
+        <button>$500</button>
+
+        <form id="formSaldo">
+          <input type="text" placeholder="Numero de telefono" />
+          <input type="text" placeholder="Confirmar numero" />
+
+          <div class="modal-buttons">
+            <button type="submit">Confirmar</button>
+            <button type="button" class="btnCerrar">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal de alimentos -->
+    <div id="modalAlimentos" class="modal">
+      <div class="modal-content">
+        <h2>Alimentos</h2>
+        <p>Selecciona una opcion</p>
+
+        <div>
+                    <button value="300">Hot Dog</button>
+                    <button value="301">Hamburguesa</button>
+                    <button value="302">Pizza</button>
+                    <button value="303">Tacos</button>
+        </div>
+
+        <div class="modal-buttons">
+          <button type="button" class="btnCerrar">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal de Servicios -->
+    <div id="modalServicios" class="modal">
+      <div class="modal-content">
+        <h2>Servicios</h2>
+        <p>Selecciona una opcion</p>
+
+        <div>
+          <button>Luz</button>
+          <button>Agua</button>
+        </div>
+
+        <div class="modal-buttons">
+          <button type="button" class="btnCerrar">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal de Pago de Servicio -->
+    <div id="modalPagoServicio" class="modal">
+      <div class="modal-content">
+        <h2 id="pagoServicioTitulo"></h2>
+        <form id="formPagoServicio">
+          <input type="text" id="pagoServicioId" placeholder="ID de servicio (10 caracteres)" maxlength="10" required />
+          <input type="number" id="pagoServicioMonto" placeholder="Monto a pagar" required />
+          <div class="modal-buttons">
+            <button type="submit">Pagar</button>
+            <button type="button" class="btnCerrar">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal de Administracion -->
+    <div id="modalAdministracion" class="modal">
+      <div class="modal-content">
+        <h2>Administracion</h2>
+        <p>Selecciona una opcion</p>
+
+        <div>
+          <button>Corte X</button>
+          <button>Corte Z</button>
+          <button>Cierre de caja</button>
+        </div>
+
+        <div class="modal-buttons">
+          <button type="button" class="btnCerrar">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- botones de imagen -->
+    <div class="botones">
+      <button class="boton" id="btnTransferencia">
+        <img src="./static/img/credit-card-8708087_1280.png" alt="Transferencia" />
+      </button>
+      <button class="boton" id="btnSaldo">
+        <img src="./static/img/celular.png" alt="Saldo" />
+      </button>
+      <button class="boton" id="btnAlimentos">
+        <img src="./static/img/alimento.png" alt="Alimentos" />
+      </button>
+      <button class="boton" id="btnServicios">
+        <img src="./static/img/image.jpg" alt="Servicios" />
+      </button>
+      <button class="boton" id="btnAdministracion">
+        <img src="./static/img/admin.png" alt="Administracion" />
+      </button>
+      <!-- En esta area va a aparecer el total -->
+      <div class="total">
+        <h1 id="total">$0.00</h1>
+      </div>
+    </div>
+
+    <script src="./static/js/utils.js" defer></script>
+    <script src="./static/js/productos.js" defer></script> // aqui se cargan los productos
+    <script src="./static/js/servicios.js" defer></script> // aqui se cargan los servicios
+    <script src="./static/js/ui.js" defer></script> // aqui se maneja la interfaz
+    <script src="./static/js/modal.js" defer></script> // aqui se manejan los modales
+    <script src="./static/js/carrito.js" defer></script> // aqui se maneja el carrito de compras
+    <script src="./static/js/main.js" defer></script> // aqui va el codigo principal
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function generar() {
+        var salida = `INSERT INTO sales VALUES `;
+        for (let i = 1; i < 50000; i++) {
+          salida += `(${i},1,TRUE,NOW(),CURTIME(),CURDATE(),NOW()),<br/>`;
+        }
+        document.getElementById("registro").innerHTML = salida;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="generar()">generar</button>
+    <div id="registro"></div>
+  </body>
+</html>

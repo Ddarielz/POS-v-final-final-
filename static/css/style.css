@@ -1,0 +1,161 @@
+th,
+h1,
+h2,
+tbody,
+td,
+tr {
+  font-family: sans-serif; /*  */
+}
+
+.titulo {
+  text-align: center; /* Que es esto??? */
+  align-items: center; /* Que es esto? */
+  display: flex; /* Que es esto?? */
+  justify-content: space-around; /* Que es esto? */
+}
+
+.titulo-1 {
+  margin: 0; /* Que es esto? */
+}
+
+.subtitulo-1 {
+  margin: 0; /* Que es esto? */
+}
+
+.logo-izq {
+  width: 100%; /* Que es esto? */
+  max-width: 60px; /* Que es esto? */
+  height: auto; /* Que es esto? */
+  margin-right: 20px; /* Que es esto? */
+  /* position: absolute; Que es esto? */
+}
+
+.logo-der {
+  width: 100%; /* Que es esto? */
+  max-width: 60px; /* Que es esto? */
+  height: auto; /* Que es esto? */
+  margin-right: 20px; /* Que es esto? */
+  /* position: absolute; Que es esto? */
+  right: 0; /* Que es esto? */
+  top: 10px; /* Que es esto? */
+}
+
+.table {
+  font-size: x-large; /* Que es esto? */
+  height: 60vh; /* Que es esto? */
+  max-height: 60vh; /* Que es esto? */
+  overflow-y: auto; /* Que es esto? */
+  border: 1px solid #000; /* Que es esto? */
+  border-radius: 15px;
+  margin: 0 0 1.5rem 0;
+}
+
+
+
+table tr {
+  text-align: center;
+  border-bottom: 1px solid #000; /* Que es esto? */
+  transition: all ease 0.3ms;
+}
+
+table tr:hover {
+  background: #444444; /* Que es esto? */
+  color: #fff; /* Que es esto? */
+  cursor: pointer; /* Que es esto? */
+}
+
+#tblLista {
+  max-height: 50%; /* Que es esto? */
+  width: 100%; /* Que es esto? */
+  font-size: larger; /* Que es esto? */
+}
+
+#tblListaBody {
+  max-height: 10%; /* Que es esto? */
+  width: 100%; /* Que es esto? */
+  font-size: larger;
+}
+
+.escaner {
+  font-size: x-large; /* Que es esto? */
+  width: calc(100% - 8px); /* Que es esto? */
+  padding: 1.5rem auto; /* Que es esto? */
+}
+
+.botones {
+  display: flex; /* Que es esto? */
+  align-items: center; /* Que es esto? */
+}
+
+.boton {
+  height: 15vh; /* Que es esto? */
+  width: 20vh; /* Que es esto? */
+  background-size: cover; /* Que es esto? */
+  background-repeat: no-repeat; /* Que es esto? */
+  background-position: center; /* Que es esto? */
+  cursor: pointer; /* Que es esto? */
+  transition: all ease 0.3ms;
+}
+
+.boton:hover {
+  background: #444444; /* Que es esto? */
+}
+
+.boton img {
+  width: 100px; /* Que es esto? */
+}
+
+.header {
+  display: flex; /* Que es esto? */
+  flex-direction: row; /* Que es esto? */
+  justify-content: space-between; /* Que es esto? */
+  flex-wrap: wrap-reverse; /* Que es esto? */
+}
+
+.total {
+  display: flex; /* Que es esto? */
+  border: 2px solid #000; /* Que es esto? */
+  width: 30%; /* Que es esto? */
+  height: 5dvw; /* Que es esto? */
+  margin: 0 auto; /* Que es esto? */
+  font-size: x-large; /* Que es esto? */
+  align-items: center; /* Que es esto? */
+  justify-content: center; /* Que es esto? */
+  position: fixed; /* Que es esto? */
+  right: 10px; /* Que es esto? */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal input {
+  width: 90%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
